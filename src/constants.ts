@@ -1,4 +1,6 @@
 import {IAccount, IView} from "./interfaces";
+import learningTypescript from "./assets/images/learning-typescript.png"
+import reactUsingTypescript from "./assets/images/react-using-typescript.png"
 
 export const ICONS: {[key: string]: string} = {
   MUI: 'https://mui.com/static/logo.png',
@@ -332,14 +334,14 @@ export const VIEWS: IView[] = [
         title: 'Learning TypeScript',
         key: 'learning_typescript',
         innerHTML: `
-          <img style="width: 100%; height: 100%" src="/certificates/learning-typescript.png"/>
+          <img style="width: 100%; height: 100%" src="${learningTypescript}"/>
         `
       },
       {
         title: 'React: Using TypeScript',
         key: 'react_using_typescript',
         innerHTML: `
-          <img style="width: 100%; height: 100%" src="/certificates/react-using-typescript.png"/>
+          <img style="width: 100%; height: 100%" src="${reactUsingTypescript}"/>
         `
       }
     ]
