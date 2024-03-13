@@ -4,7 +4,6 @@ import {changeLanguageAction} from "../../../../../../../../redux/actions/settin
 import {useTranslation} from "react-i18next";
 import {useEffect} from "react";
 import i18n from "../../../../../../../../translations/i18n";
-import {ICONS} from "../../../../../../../../constants";
 
 const Language = () => {
   const {t} = useTranslation()
@@ -21,26 +20,6 @@ const Language = () => {
     });
   }, [language]);
 
-  const addBackgroundImageRecursively = (element: HTMLElement | null): void => {
-    if (element && element.nodeType === 1) {
-      (element as HTMLElement).style.backgroundImage = `url(${ICONS.KACAP})`;
-    }
-
-    if (element?.children && element.children.length > 0) {
-      // @ts-ignore
-      for (const child of element.children) {
-        addBackgroundImageRecursively(child as HTMLElement);
-      }
-    }
-  };
-
-  const handleKacap = () => {
-    const allDivs = document.getElementsByTagName('div');
-      // @ts-ignore
-      for (const div of allDivs) {
-        addBackgroundImageRecursively(div as HTMLElement);
-      }
-  }
 
   return (
     <div className={styles.block}>
@@ -55,12 +34,6 @@ const Language = () => {
         onClick={() => handleLanguage('ua')}
       >
         {t('ukrainian')}
-      </div>
-      <div
-        className={styles.item}
-        onClick={() => handleKacap()}
-      >
-        {t('russian')}
       </div>
     </div>
   )

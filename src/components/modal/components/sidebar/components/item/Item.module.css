@@ -11,6 +11,7 @@
     align-items: center;
     cursor: pointer;
     padding: 8px;
+    transition: all 0.3s;
 }
 
 .item:hover {

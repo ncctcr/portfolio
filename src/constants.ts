@@ -23,7 +23,6 @@ export const ICONS: {[key: string]: string} = {
   EXPERIENCE: 'https://cdn.iconscout.com/icon/free/png-512/free-apple-messages-493150.png?f=avif&w=256',
   SOURCE: 'https://cdn.iconscout.com/icon/free/png-512/free-apple-healt-493148.png?f=avif&w=256',
   TELEGRAM: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png',
-  KACAP: 'https://www.meme-arsenal.com/memes/e8e6fa9504bf46adfaaca70f120ff3a6.jpg'
 }
 
 
