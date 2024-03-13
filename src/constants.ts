@@ -43,6 +43,12 @@ export const SIDEBAR = [
   {title: 'Language', key: 'language', icon: ICONS.SETTINGS, br: false},
 ]
 
+const noDataContent = {
+  title: 'Message',
+  key: 'Message',
+  text: 'This block isn\'t ready yet.'
+}
+
 const GENERAL: IView = {
     title: 'General',
     key: 'general',
@@ -313,32 +319,32 @@ const TYPESCRIPT: IView = {
 const REDUX: IView = {
   title: 'Redux',
   key: 'redux',
-  content: [],
+  content: [noDataContent],
 }
 
 const MUI: IView = {
   title: 'MUI & Material UI',
   key: 'mui',
-  content: [],
+  content: [noDataContent],
 
 }
 
 const AXIOS: IView = {
   title: 'Axios',
   key: 'axios',
-  content: [],
+  content: [noDataContent],
 }
 
 const CHARTJS: IView = {
   title: 'Chart.js',
   key: 'chartjs',
-  content: [],
+  content: [noDataContent],
 }
 
 const I18N: IView = {
   title: 'i18n',
   key: 'i18n',
-  content: [],
+  content: [noDataContent],
 }
 
 const THEME: IView = {
@@ -356,7 +362,11 @@ const LANGUAGE: IView = {
   key: 'language'
 }
 
-const EXPERIENCE: IView = {title: 'Experience', key: 'experience'}
+const EXPERIENCE: IView = {
+  title: 'Experience',
+  key: 'experience',
+  content: [noDataContent]
+}
 
 const EDUCATION: IView = {
   title: 'Education',
@@ -373,18 +383,6 @@ const EDUCATION: IView = {
       text: "Secondary (Complete) Education. Telecommunications and Radio Engineering. 2012 - 2016"
     },
   ],
-  block_links: [
-    {
-      title: 'Also interesting',
-      key: 'Also interesting',
-      links: [
-        {
-          title: 'Licenses & certifications',
-          key: 'licenses_and_certification',
-        }
-      ]
-    },
-  ]
 }
 
 const LICENCES_AND_CERTIFICATIONS: IView = {
@@ -412,18 +410,6 @@ const LICENCES_AND_CERTIFICATIONS: IView = {
           <img style="width: 100%; height: 100%" src="${reactUsingTypescript}"/>
         `
     }
-  ],
-  block_links: [
-    {
-      title: 'Also interesting',
-      key: 'Also interesting',
-      links: [
-        {
-          title: 'Skills',
-          key: 'skills',
-        }
-      ]
-    },
   ]
 }
 
@@ -439,10 +425,16 @@ const CONTACTS: IView = {
       },
       {
         title: 'Social',
-        key: 'social'
-
+        key: 'social',
+        text: 'No have at the moment'
       },
     ]
+}
+
+const GIT: IView = {
+  title: 'Git',
+  key: 'git',
+  content: [noDataContent]
 }
 
 export const VIEWS: IView[] = [
@@ -464,6 +456,7 @@ export const VIEWS: IView[] = [
   EXPERIENCE,
   EDUCATION,
   LICENCES_AND_CERTIFICATIONS,
-  CONTACTS
+  CONTACTS,
+  GIT
 ]
 
