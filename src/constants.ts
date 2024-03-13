@@ -43,11 +43,29 @@ export const SIDEBAR = [
   {title: 'Language', key: 'language', icon: ICONS.SETTINGS, br: false},
 ]
 
-export const VIEWS: IView[] = [
-  {
+const GENERAL: IView = {
     title: 'General',
     key: 'general',
-    content: [],
+    content: [
+      {
+        title: 'Message',
+        key: 'Message',
+        innerHTML: `
+          <p style="margin-top: 0">Hello there!</p>
+          <p style="margin-bottom: 0">
+            I am a frontend developer who specializes in ReactJS. I
+            have a total of 4 years of experience working with web applications and
+            possess deep skills in creating modern web applications and user
+            interface components using ReactJS and related technologies. I can
+            easily develop and customize components with consideration for best
+            practices and ensure high performance, scalability, and accessibility of
+            web applications. Proponent of semantically correct pages. I am also proficient in using Redux to manage
+            application state and TypeScript to provide type safety and simplify
+            development.
+          </p>
+        `
+      }
+    ],
     block_links: [
       {
         title: 'Technical',
@@ -79,112 +97,114 @@ export const VIEWS: IView[] = [
         ]
       }
     ]
-  },
-  {
-    title: 'Skills',
-    key: 'skills',
-    content: [
-      {
-        title: 'Description',
-        key: 'description',
-        text: "Skills, in general, refer to a person's ability to perform specific tasks, actions, or activities effectively and efficiently. They encompass a wide range of competencies acquired through learning, training, and experience.",
-      }
-    ],
-    block_links: [
-      {
-        title: 'Frameworks',
-        key: 'frameworks',
-        links: [
-          {
-            title: 'React',
-            icon: ICONS.REACT,
-            key: 'react',
-          }
-        ]
-      },
-      {
-        title: 'Programming languages',
-        key: 'programming_languages',
-        links: [
-          {
-            title: 'HTML',
-            icon: ICONS.HTML,
-            key: 'html',
-          },
-          {
-            title: 'CSS',
-            icon: ICONS.CSS,
-            key: 'css',
-          },
-          {
-            title: 'JavaScript',
-            icon: ICONS.JS,
-            key: 'javascript',
-          },
-          {
-            title: 'TypeScript',
-            icon: ICONS.TS,
-            key: 'typescript',
-          },
-        ]
-      },
-      {
-        title: 'Libraries',
-        key: 'libraries',
-        links: [
-          {
-            title: 'Redux',
-            icon: ICONS.REDUX,
-            key: 'redux',
-          },
-          {
-            title: 'MUI & Material UI',
-            icon: ICONS.MUI,
-            key: 'mui',
-          },
-          {
-            title: 'Axios',
-            icon: ICONS.AXIOS,
-            key: 'axios',
-          },
-          {
-            title: 'Chart.js',
-            icon: ICONS.CHARTJS,
-            key: 'chartjs',
-          },
-          {
-            title: 'i18n',
-            icon: ICONS.I18N,
-            key: 'i18n',
-          },
-        ]
-      },
-      {
-        title: 'Tools',
-        key: 'tools',
-        links: [
-          {
-            title: 'Git',
-            icon: ICONS.GIT,
-            key: 'git',
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: 'React',
-    key: 'react',
-    content: [
-      {
-        title: 'Description',
-        key: 'description',
-        text: 'React - is a JavaScript library that helps developers build user interfaces for web applications. It simplifies the process of creating interactive and dynamic UIs by breaking down the interface into reusable components.'
-      },
-      {
-        title: 'Experience',
-        key: "experience",
-        innerHTML: `
+  }
+
+const SKILLS: IView = {
+  title: 'Skills',
+  key: 'skills',
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: "Skills, in general, refer to a person's ability to perform specific tasks, actions, or activities effectively and efficiently. They encompass a wide range of competencies acquired through learning, training, and experience.",
+    }
+  ],
+  block_links: [
+    {
+      title: 'Frameworks',
+      key: 'frameworks',
+      links: [
+        {
+          title: 'React',
+          icon: ICONS.REACT,
+          key: 'react',
+        }
+      ]
+    },
+    {
+      title: 'Programming languages',
+      key: 'programming_languages',
+      links: [
+        {
+          title: 'HTML',
+          icon: ICONS.HTML,
+          key: 'html',
+        },
+        {
+          title: 'CSS',
+          icon: ICONS.CSS,
+          key: 'css',
+        },
+        {
+          title: 'JavaScript',
+          icon: ICONS.JS,
+          key: 'javascript',
+        },
+        {
+          title: 'TypeScript',
+          icon: ICONS.TS,
+          key: 'typescript',
+        },
+      ]
+    },
+    {
+      title: 'Libraries',
+      key: 'libraries',
+      links: [
+        {
+          title: 'Redux',
+          icon: ICONS.REDUX,
+          key: 'redux',
+        },
+        {
+          title: 'MUI & Material UI',
+          icon: ICONS.MUI,
+          key: 'mui',
+        },
+        {
+          title: 'Axios',
+          icon: ICONS.AXIOS,
+          key: 'axios',
+        },
+        {
+          title: 'Chart.js',
+          icon: ICONS.CHARTJS,
+          key: 'chartjs',
+        },
+        {
+          title: 'i18n',
+          icon: ICONS.I18N,
+          key: 'i18n',
+        },
+      ]
+    },
+    {
+      title: 'Tools',
+      key: 'tools',
+      links: [
+        {
+          title: 'Git',
+          icon: ICONS.GIT,
+          key: 'git',
+        }
+      ]
+    }
+  ]
+}
+
+const REACT: IView = {
+  title: 'React',
+  key: 'react',
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'React - is a JavaScript library that helps developers build user interfaces for web applications. It simplifies the process of creating interactive and dynamic UIs by breaking down the interface into reusable components.'
+    },
+    {
+      title: 'Experience',
+      key: "experience",
+      innerHTML: `
             <p style="margin-top: 0">As a frontend developer with 4 years of experience, I have a strong proficiency in React along with a solid understanding of Redux, Hooks, and functional programming paradigms.</p>
             <p>Throughout my career, I have leveraged these technologies to create dynamic and interactive user interfaces for various web applications.<p/>
             <p> I am adept at utilizing React's component-based architecture to create reusable and maintainable code, promoting scalability and efficiency in development workflows.<p/>
@@ -194,10 +214,11 @@ export const VIEWS: IView[] = [
             <p> Leveraging the power of functional programming concepts in JavaScript, I strive to write clean, declarative, and composable code, enhancing readability and maintainability across projects.<p/>
             <p style="margin-bottom: 0">Overall, my extensive experience with React, Redux, Hooks, and functional programming has equipped me with the skills and knowledge necessary to tackle complex frontend challenges and deliver high-quality solutions that meet both user requirements and business objectives.<p/>
           `
-      }
-    ],
-  },
-  {
+    }
+  ],
+}
+
+const HTML: IView = {
     title: 'HTML',
     key: 'html',
     content: [
@@ -218,180 +239,195 @@ export const VIEWS: IView[] = [
           `
       }
     ],
-  },
-  {
-    title: 'CSS',
-    key: 'css',
-    content: [
-      {
-        title: 'Description',
-        key: 'description',
-        text: 'CSS - is a programming language that is used to design web pages. It defines how each element of a web page looks like: its color, size, layout, and other styles.'
-      },
-      {
-        title: 'Experience',
-        key: 'experience',
-        innerHTML: `
+}
+
+const CSS: IView = {
+  title: 'CSS',
+  key: 'css',
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'CSS - is a programming language that is used to design web pages. It defines how each element of a web page looks like: its color, size, layout, and other styles.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
           <p style="margin-top: 0">My expertise encompasses crafting visually appealing and user-friendly web interfaces through precise styling and layout techniques.</p> 
           <p>I'm adept at leveraging CSS to customize the appearance of web elements, ensuring consistency across different browsers and devices.</p> 
           <p>Additionally, I have a strong command of CSS frameworks and preprocessors, enabling me to streamline development processes and maintain clean, scalable code.</p>
           <p>My proficiency in CSS extends to implementing responsive design principles, optimizing performance, and troubleshooting styling issues effectively.</p>
           <p style="margin-bottom: 0">Overall, my years of experience have honed my skills in utilizing CSS to create engaging and functional web experiences.</p>
         `
-      }
-    ],
-  },
-  {
-    title: 'JavaScript',
-    key: 'javascript',
-    content: [
-      {
-        title: 'Description',
-        key: 'description',
-        text: 'JavaScript - is a programming language used to make web pages interactive. It allows you to do things like show pop-up messages, validate forms, create animations, and dynamically update content on a webpage without needing to reload the entire page.'
-      },
-      {
-        title: 'Experience',
-        key: 'experience',
-        innerHTML: `
+    }
+  ],
+}
+
+const JAVASCRIPT: IView = {
+  title: 'JavaScript',
+  key: 'javascript',
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'JavaScript - is a programming language used to make web pages interactive. It allows you to do things like show pop-up messages, validate forms, create animations, and dynamically update content on a webpage without needing to reload the entire page.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
           <p style="margin-top: 0"> My experience involves developing interactive and dynamic web applications, leveraging JavaScript to enhance user experiences and add functionality to websites.</p> 
           <p>I'm proficient in using JavaScript library such as React.js to create robust and scalable front-end solutions.</p> 
           <p>Additionally, I have expertise in vanilla JavaScript, allowing me to implement custom features and solve complex problems efficiently.</p>
           <p>I'm well-versed in asynchronous programming, utilizing promises, async/await, and AJAX to manage data fetching and processing seamlessly.</p>
           <p style="margin-bottom: 0">My experience also includes optimizing JavaScript code for performance and accessibility, ensuring smooth and responsive interactions across various browsers and devices.</p>
         `
-      }
-    ],
-  },
-  {
-    title: 'TypeScript',
-    key: 'typescript',
-    content: [
-      {
-        title: 'Description',
-        key: 'description',
-        text: 'TypeScript - is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.'
-      },
-      {
-        title: 'Experience',
-        key: 'experience',
-        innerHTML: `
+    }
+  ],
+}
+
+const TYPESCRIPT: IView = {
+  title: 'TypeScript',
+  key: 'typescript',
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'TypeScript - is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
           <p style="margin-top: 0">Over the course of my career, I've gained significant experience with TypeScript.</p> 
           <p>TypeScript is a superset of JavaScript that adds static typing to the language, which enhances code robustness and maintainability.</p> 
           <p>My proficiency with TypeScript involves leveraging its features such as type annotations, interfaces, and generics to catch errors during development and improve code clarity.</p>
           <p>I have successfully utilized TypeScript in various front-end and back-end projects, enabling me to write cleaner, more predictable code and facilitate collaboration within development teams.</p>
           <p style="margin-bottom: 0">Additionally, TypeScript's support for modern JavaScript features and tooling integration has empowered me to build scalable and maintainable applications with confidence.</p>
         `
-      }
-    ],
-  },
-  {
-    title: 'Redux',
-    key: 'redux',
-    content: [],
-  },
-  {
-    title: 'MUI & Material UI',
-    key: 'mui',
-    content: [],
+    }
+  ],
+}
 
-  },
-  {
-    title: 'Axios',
-    key: 'axios',
-    content: [],
-  },
-  {
-    title: 'Chart.js',
-    key: 'chartjs',
-    content: [],
-  },
-  {
-    title: 'i18n',
-    key: 'i18n',
-    content: [],
-  },
-  {
-    title: 'Theme',
-    key: 'theme'
-  },
-  {
-    title: 'Window',
-    key: 'window'
-  },
-  {
-    title: 'Language',
-    key: 'language'
-  },
-  {title: 'Experience', key: 'experience'},
-  {
-    title: 'Education',
-    key: 'education',
-    content: [
-      {
-        title: 'Kherson State University',
-        key: 'kherson_state_university',
-        text: "Bachelor's degree, software engineer. 2016 - 2021"
-      },
-      {
-        title: 'Nova Kakhovka Instrumental Engineering College',
-        key: 'nova_kakhovka_instrumental_engineering_college',
-        text: "Secondary (Complete) Education. Telecommunications and Radio Engineering. 2012 - 2016"
-      },
-    ],
-    block_links: [
-      {
-        title: 'Also interesting',
-        key: 'Also interesting',
-        links: [
-          {
-            title: 'Licenses & certifications',
-            key: 'licenses_and_certification',
-          }
-        ]
-      },
-    ]
-  },
-  {
-    title: 'Licenses & certifications',
-    key: 'licenses_and_certification',
-    content: [
-      {
-        title: 'Description',
-        key: 'description',
-        innerHTML: `
+const REDUX: IView = {
+  title: 'Redux',
+  key: 'redux',
+  content: [],
+}
+
+const MUI: IView = {
+  title: 'MUI & Material UI',
+  key: 'mui',
+  content: [],
+
+}
+
+const AXIOS: IView = {
+  title: 'Axios',
+  key: 'axios',
+  content: [],
+}
+
+const CHARTJS: IView = {
+  title: 'Chart.js',
+  key: 'chartjs',
+  content: [],
+}
+
+const I18N: IView = {
+  title: 'i18n',
+  key: 'i18n',
+  content: [],
+}
+
+const THEME: IView = {
+  title: 'Theme',
+  key: 'theme'
+}
+
+const WINDOW: IView = {
+  title: 'Window',
+  key: 'window'
+}
+
+const LANGUAGE: IView = {
+  title: 'Language',
+  key: 'language'
+}
+
+const EXPERIENCE: IView = {title: 'Experience', key: 'experience'}
+
+const EDUCATION: IView = {
+  title: 'Education',
+  key: 'education',
+  content: [
+    {
+      title: 'Kherson State University',
+      key: 'kherson_state_university',
+      text: "Bachelor's degree, software engineer. 2016 - 2021"
+    },
+    {
+      title: 'Nova Kakhovka Instrumental Engineering College',
+      key: 'nova_kakhovka_instrumental_engineering_college',
+      text: "Secondary (Complete) Education. Telecommunications and Radio Engineering. 2012 - 2016"
+    },
+  ],
+  block_links: [
+    {
+      title: 'Also interesting',
+      key: 'Also interesting',
+      links: [
+        {
+          title: 'Licenses & certifications',
+          key: 'licenses_and_certification',
+        }
+      ]
+    },
+  ]
+}
+
+const LICENCES_AND_CERTIFICATIONS: IView = {
+  title: 'Licenses & certifications',
+  key: 'licenses_and_certification',
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      innerHTML: `
         It may be important for someone to look at my certificates, but remember, the number of certificates doesn\'t define the skills and expertise of a developer. &#128517; 
         Practical experience, problem-solving abilities, and continuous learning are equally important factors contributing to one\'s proficiency as a developer.\n`
-      },
-      {
-        title: 'Learning TypeScript',
-        key: 'learning_typescript',
-        innerHTML: `
+    },
+    {
+      title: 'Learning TypeScript',
+      key: 'learning_typescript',
+      innerHTML: `
           <img style="width: 100%; height: 100%" src="${learningTypescript}"/>
         `
-      },
-      {
-        title: 'React: Using TypeScript',
-        key: 'react_using_typescript',
-        innerHTML: `
+    },
+    {
+      title: 'React: Using TypeScript',
+      key: 'react_using_typescript',
+      innerHTML: `
           <img style="width: 100%; height: 100%" src="${reactUsingTypescript}"/>
         `
-      }
-    ],
-    block_links: [
-      {
-        title: 'Also interesting',
-        key: 'Also interesting',
-        links: [
-          {
-            title: 'Skills',
-            key: 'skills',
-          }
-        ]
-      },
-    ]
-  },
-  {
+    }
+  ],
+  block_links: [
+    {
+      title: 'Also interesting',
+      key: 'Also interesting',
+      links: [
+        {
+          title: 'Skills',
+          key: 'skills',
+        }
+      ]
+    },
+  ]
+}
+
+const CONTACTS: IView = {
     title: 'Contacts',
     key: 'contacts',
     content: [
@@ -407,6 +443,27 @@ export const VIEWS: IView[] = [
 
       },
     ]
-  },
+}
+
+export const VIEWS: IView[] = [
+  GENERAL,
+  SKILLS,
+  REACT,
+  HTML,
+  CSS,
+  JAVASCRIPT,
+  TYPESCRIPT,
+  REDUX,
+  MUI,
+  AXIOS,
+  CHARTJS,
+  I18N,
+  THEME,
+  WINDOW,
+  LANGUAGE,
+  EXPERIENCE,
+  EDUCATION,
+  LICENCES_AND_CERTIFICATIONS,
+  CONTACTS
 ]
 
