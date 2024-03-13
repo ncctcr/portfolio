@@ -1,6 +1,7 @@
 import {IAccount, IView} from "./interfaces";
 import learningTypescript from "./assets/images/learning-typescript.png"
 import reactUsingTypescript from "./assets/images/react-using-typescript.png"
+import covidChallengeHackathon from "./assets/images/covid-challenge-hackathon.png"
 
 export const ICONS: {[key: string]: string} = {
   MUI: 'https://mui.com/static/logo.png',
@@ -365,7 +366,79 @@ const LANGUAGE: IView = {
 const EXPERIENCE: IView = {
   title: 'Experience',
   key: 'experience',
-  content: [noDataContent]
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'This view describes the experience of working in different companies'
+    },
+    {
+      title: 'May 2022 - Present (1yr 10mos)',
+      key: 'May 2022 - Present (1yr 10mos)',
+      innerHTML: `
+        <b>Frontend Developer</b>
+        <span>(Handiscover)</span>
+        <ul>
+          <li>Consistently met my short and long-term targets.</li>
+          <li>Proactively participated in meetings and helped create new practices.</li>
+          <li>Pitched ideas on how to improve performance and efficiency.</li>
+          <li>Helped management to identify workflow issues and find solutions.</li>
+          <li>Development of several related projects where the first project is an admin panel and the second project is a client-side application.</li>
+          <li>Development of pages/modules based on Figma mockups.</li>
+          <li>Development of adaptive pages/modules.</li>
+          <li>Implementation of new features into old code, refactoring, debugging, and bug fixing.</li>
+          <li>Use/customization of the MaterialUI library for future pages.</li>
+        </ul>
+      `
+    },
+    {
+      title: 'January 2022 - May 2022 (5mos)',
+      key: 'January 2022 - May 2022 (5mos)',
+      innerHTML: `
+        <b>Frontend Developer</b>
+        <span>(EPAM Systems)</span>
+        <ul>
+          <li>Сode debugging/refactoring to improve readability and efficiency.</li>
+          <li>Developing new features and redesigning existing features to improve user experience.</li>
+          <li>Writing quality tests and actively participating in the code review process.</li>
+          <li>Applied agile development principles to ensure effective teamwork and timely delivery of results.</li>
+          <li>Used Git and Redux version control system to effectively manage the state of the application</li>
+        </ul>
+      `
+    },
+    {
+      title: 'April 2021 - December 2021 (9mos)',
+      key: 'April 2021 - December 2021 (9mos)',
+      innerHTML: `
+        <b>Frontend Developer</b>
+        <span>(Forex Tester Software)</span>
+        <ul>
+          <li>Implemented an online chat assistant for websites using an iframe.</li>
+          <li>Development of pages/modules based on Figma mockups.</li>
+          <li>Development of adaptive pages/modules.</li>
+          <li>Сode reviews</li>
+          <li>Implementation of new features into old code, refactoring, and debugging.</li>
+        </ul>
+      `
+    },
+    {
+      title: 'May 2019 - March 2021 (1yr 11mos)',
+      key: 'May 2019 - March 2021 (1yr 11mos)',
+      innerHTML: `
+        <b>Frontend & Backend Developer</b>
+        <span>(BeHealthy.AI)</span>
+        <ul>
+            <li>Developed a questionnaire page with dynamically pulling up new next questions from the BE side.</li>
+            <li>Development of pages/modules based on Figma mockups.</li>
+            <li>Development of adaptive pages/modules.</li>
+            <li>Implementation of new features into old code, refactoring, and debugging.</li>
+            <li>Development of endpoints on Django, development of components on VueJS.</li>
+            <li>Сode reviews</li>
+            <li>Writing tests</li>
+        </ul>
+      `
+    },
+  ]
 }
 
 const EDUCATION: IView = {
@@ -409,7 +482,14 @@ const LICENCES_AND_CERTIFICATIONS: IView = {
       innerHTML: `
           <img style="width: 100%; height: 100%" src="${reactUsingTypescript}"/>
         `
-    }
+    },
+    {
+      title: 'Covid Challenge Hackathon',
+      key: 'Covid Challenge Hackathon',
+      innerHTML: `
+          <img style="width: 100%; height: 100%" src="${covidChallengeHackathon}"/>
+        `
+    },
   ]
 }
 
