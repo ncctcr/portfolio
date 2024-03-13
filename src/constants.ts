@@ -175,7 +175,27 @@ export const VIEWS: IView[] = [
   {
     title: 'React',
     key: 'react',
-    content: [],
+    content: [
+      {
+        title: 'Description',
+        key: 'description',
+        text: 'React - is a JavaScript library that helps developers build user interfaces for web applications. It simplifies the process of creating interactive and dynamic UIs by breaking down the interface into reusable components.'
+      },
+      {
+        title: 'Experience',
+        key: "experience",
+        innerHTML: `
+            <p style="margin-top: 0">As a frontend developer with 4 years of experience, I have a strong proficiency in React along with a solid understanding of Redux, Hooks, and functional programming paradigms.</p>
+            <p>Throughout my career, I have leveraged these technologies to create dynamic and interactive user interfaces for various web applications.<p/>
+            <p> I am adept at utilizing React's component-based architecture to create reusable and maintainable code, promoting scalability and efficiency in development workflows.<p/>
+            <p>Moreover, my familiarity with Redux enables me to effectively manage application state and orchestrate data flow, ensuring a predictable and stable user experience.<p/>
+            <p>I have implemented Redux middleware and combined it with React to manage asynchronous actions and side effects seamlessly.<p/>
+            <p>In addition, my expertise extends to utilizing React Hooks to manage component state and lifecycle in a functional and concise manner.<p/>
+            <p> Leveraging the power of functional programming concepts in JavaScript, I strive to write clean, declarative, and composable code, enhancing readability and maintainability across projects.<p/>
+            <p style="margin-bottom: 0">Overall, my extensive experience with React, Redux, Hooks, and functional programming has equipped me with the skills and knowledge necessary to tackle complex frontend challenges and deliver high-quality solutions that meet both user requirements and business objectives.<p/>
+          `
+      }
+    ],
   },
   {
     title: 'HTML',
@@ -195,7 +215,8 @@ export const VIEWS: IView[] = [
             <p>Working with HTML5, I have implemented the latest features and functionalities, including the integration of multimedia elements like audio and video, as well as the use of semantic tags to improve search engine optimization and enhance the overall user experience.<p/>
             <p>In my projects, I have collaborated closely with UI/UX designers and back-end developers to ensure seamless integration and functionality. I am well-versed in using HTML with CSS and JavaScript to implement responsive designs and create interactive and dynamic web pages.<p/>
             <p style="margin-bottom: 0">I also have experience in optimizing web pages for performance and speed, utilizing techniques such as minification and proper tag usage.<p/>
-          `}
+          `
+      }
     ],
   },
   {
