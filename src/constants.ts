@@ -199,17 +199,68 @@ export const VIEWS: IView[] = [
   {
     title: 'CSS',
     key: 'css',
-    content: [],
+    content: [
+      {
+        title: 'Description',
+        key: 'description',
+        text: 'CSS - is a programming language that is used to design web pages. It defines how each element of a web page looks like: its color, size, layout, and other styles.'
+      },
+      {
+        title: 'Experience',
+        key: 'experience',
+        innerHTML: `
+          <p style="margin-top: 0">My expertise encompasses crafting visually appealing and user-friendly web interfaces through precise styling and layout techniques.</p> 
+          <p>I'm adept at leveraging CSS to customize the appearance of web elements, ensuring consistency across different browsers and devices.</p> 
+          <p>Additionally, I have a strong command of CSS frameworks and preprocessors, enabling me to streamline development processes and maintain clean, scalable code.</p>
+          <p>My proficiency in CSS extends to implementing responsive design principles, optimizing performance, and troubleshooting styling issues effectively.</p>
+          <p style="margin-bottom: 0">Overall, my years of experience have honed my skills in utilizing CSS to create engaging and functional web experiences.</p>
+        `
+      }
+    ],
   },
   {
     title: 'JavaScript',
     key: 'javascript',
-    content: [],
+    content: [
+      {
+        title: 'Description',
+        key: 'description',
+        text: 'JavaScript - is a programming language used to make web pages interactive. It allows you to do things like show pop-up messages, validate forms, create animations, and dynamically update content on a webpage without needing to reload the entire page.'
+      },
+      {
+        title: 'Experience',
+        key: 'experience',
+        innerHTML: `
+          <p style="margin-top: 0"> My experience involves developing interactive and dynamic web applications, leveraging JavaScript to enhance user experiences and add functionality to websites.</p> 
+          <p>I'm proficient in using JavaScript library such as React.js to create robust and scalable front-end solutions.</p> 
+          <p>Additionally, I have expertise in vanilla JavaScript, allowing me to implement custom features and solve complex problems efficiently.</p>
+          <p>I'm well-versed in asynchronous programming, utilizing promises, async/await, and AJAX to manage data fetching and processing seamlessly.</p>
+          <p style="margin-bottom: 0">My experience also includes optimizing JavaScript code for performance and accessibility, ensuring smooth and responsive interactions across various browsers and devices.</p>
+        `
+      }
+    ],
   },
   {
     title: 'TypeScript',
     key: 'typescript',
-    content: [],
+    content: [
+      {
+        title: 'Description',
+        key: 'description',
+        text: 'TypeScript - is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.'
+      },
+      {
+        title: 'Experience',
+        key: 'experience',
+        innerHTML: `
+          <p style="margin-top: 0">Over the course of my career, I've gained significant experience with TypeScript.</p> 
+          <p>TypeScript is a superset of JavaScript that adds static typing to the language, which enhances code robustness and maintainability.</p> 
+          <p>My proficiency with TypeScript involves leveraging its features such as type annotations, interfaces, and generics to catch errors during development and improve code clarity.</p>
+          <p>I have successfully utilized TypeScript in various front-end and back-end projects, enabling me to write cleaner, more predictable code and facilitate collaboration within development teams.</p>
+          <p style="margin-bottom: 0">Additionally, TypeScript's support for modern JavaScript features and tooling integration has empowered me to build scalable and maintainable applications with confidence.</p>
+        `
+      }
+    ],
   },
   {
     title: 'Redux',
