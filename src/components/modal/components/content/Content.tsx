@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux'
 import {useSelector} from 'react-redux'
 import {removeHistoryKey, setCurrentKey, setHistoryKey} from "../../../../redux/actions/dataActions";
 import {IView} from "../../../../interfaces";
+import { AnimatePresence } from "framer-motion";
+
 const Content = () => {
   const dispatch = useDispatch()
   const [currentView, setCurrentView] = useState<IView | null>(null)
@@ -38,7 +40,9 @@ const Content = () => {
   return (
     <div className={styles.wrapper}>
       <Header onClick={handleBack}/>
-      <Body view={currentView} onClick={handleClick}/>
+      <AnimatePresence mode="wait" key='content'>
+        <Body view={currentView} onClick={handleClick}/>
+      </AnimatePresence>
     </div>
   )
 }

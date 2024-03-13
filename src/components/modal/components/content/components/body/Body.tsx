@@ -9,6 +9,7 @@ import {useTranslation} from "react-i18next";
 import Language from "./components/language/Language";
 import Account from "../../../sidebar/components/account/Account";
 import {ACCOUNT} from "../../../../../../constants";
+import { motion } from "framer-motion";
 
 type PropsType = {
   view: IView | null;
@@ -76,11 +77,21 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
 
   return (
     <div className={styles.wrapper}>
-      {view && view.key === 'theme' ? <Theme/> : null}
-      {view && view.key === 'window' ? <Window /> : null}
-      {view && view.key === 'language' ? <Language /> : null}
-      {getContent(view)}
-      {getLinks(view)}
+      {view ? (
+        <motion.div
+          key={view.key}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          {view && view.key === 'theme' ? <Theme/> : null}
+          {view && view.key === 'window' ? <Window /> : null}
+          {view && view.key === 'language' ? <Language /> : null}
+          {getContent(view)}
+          {getLinks(view)}
+        </motion.div>
+      ) : null}
     </div>
   )
 }
