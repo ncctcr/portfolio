@@ -11,6 +11,15 @@
     max-height: 800px;
 }
 
+.fullscreen {
+    height: 100%;
+    width: 100%;
+    max-width: unset;
+    max-height: unset;
+    border-radius: unset;
+    border: unset;
+}
+
 
 @media (max-width: 900px) {
     .tilt {

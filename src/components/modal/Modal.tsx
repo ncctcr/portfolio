@@ -6,10 +6,11 @@ import {useSelector} from 'react-redux'
 
 const Modal = () => {
   const parallaxMode = useSelector((state: any) => state.settings.parallaxMode)
+  const fullscreenMode = useSelector((state: any) => state.settings.fullscreenMode)
 
   return (
     <Tilt
-      className={styles.tilt}
+      className={`${styles.tilt} ${fullscreenMode ? styles.fullscreen : ''}`}
       scale={1}
       perspective={3500}
       tiltMaxAngleX={8}

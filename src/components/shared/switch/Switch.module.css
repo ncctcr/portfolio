@@ -46,3 +46,13 @@
 .formSwitch input:checked + i { background-color: #4BD763; }
 .formSwitch input:checked + i::before { transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0); }
 .formSwitch input:checked + i::after { transform: translate3d(22px, 2px, 0); }
+.formSwitch input:disabled + i {
+    background-color: var(--disabled-switch-background);
+    cursor: not-allowed;
+}
+
+.formSwitch input:disabled + i::before,
+.formSwitch input:disabled + i::after {
+    background-color: var(--disabled-switch-background);
+    box-shadow: none;
+}

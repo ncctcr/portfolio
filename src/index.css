@@ -39,6 +39,7 @@ code {
 
   /* Switch */
   --switch-background: #ffffff;
+  --disabled-switch-background: #6d6d6d3b;
 }
 
 [data-theme='dark'] {
@@ -58,4 +59,5 @@ code {
 
   /* Switch */
   --switch-background: #4f4f4f;
+  --disabled-switch-background: #91919140;
 }

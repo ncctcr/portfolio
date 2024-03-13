@@ -1,5 +1,5 @@
 // src/redux/actions/settingsActions.ts
-import {SET_THEME, SET_LANGUAGE, SET_BLOB_COLOR, SET_PARALLAX_MODE} from './types';
+import {SET_THEME, SET_LANGUAGE, SET_BLOB_COLOR, SET_PARALLAX_MODE, SET_FULLSCREEN_MODE} from './types';
 
 export const changeThemeAction = (payload: 'dark' | 'light') => {
   return {
@@ -24,6 +24,13 @@ export const changeBlobColor = (payload: string) => {
 export const setParallaxMode = (payload: boolean) => {
   return {
     type: SET_PARALLAX_MODE,
+    payload,
+  };
+};
+
+export const setFullscreenMode = (payload: boolean) => {
+  return {
+    type: SET_FULLSCREEN_MODE,
     payload,
   };
 };

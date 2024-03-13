@@ -5,6 +5,7 @@ export const SET_THEME = 'SET_THEME';
 export const SET_LANGUAGE = 'SET_LANGUAGE';
 export const SET_BLOB_COLOR = 'SET_BLOB_COLOR';
 export const SET_PARALLAX_MODE = 'SET_PARALLAX_MODE';
+export const SET_FULLSCREEN_MODE = 'SET_FULLSCREEN_MODE';
 
 
 // data
