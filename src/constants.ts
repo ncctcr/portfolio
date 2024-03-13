@@ -338,6 +338,18 @@ export const VIEWS: IView[] = [
         key: 'nova_kakhovka_instrumental_engineering_college',
         text: "Secondary (Complete) Education. Telecommunications and Radio Engineering. 2012 - 2016"
       },
+    ],
+    block_links: [
+      {
+        title: 'Also interesting',
+        key: 'Also interesting',
+        links: [
+          {
+            title: 'Licenses & certifications',
+            key: 'licenses_and_certification',
+          }
+        ]
+      },
     ]
   },
   {
@@ -365,6 +377,18 @@ export const VIEWS: IView[] = [
           <img style="width: 100%; height: 100%" src="${reactUsingTypescript}"/>
         `
       }
+    ],
+    block_links: [
+      {
+        title: 'Also interesting',
+        key: 'Also interesting',
+        links: [
+          {
+            title: 'Skills',
+            key: 'skills',
+          }
+        ]
+      },
     ]
   },
   {
