@@ -20,7 +20,11 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
   const getContent = (view: IView | null) => {
     let content: any = []
     if (view?.key === 'general' && window.innerWidth <= 768) {
-      content = [<Account data={ACCOUNT}/>]
+      content = [
+        <div className={styles.block}>
+          <Account data={ACCOUNT}/>
+        </div>
+      ]
     }
     if (view && view.content && view.content.length > 0) {
       content = [...content, view.content.flatMap((i, index) => {
