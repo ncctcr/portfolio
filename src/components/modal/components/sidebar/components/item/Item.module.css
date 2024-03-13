@@ -1,0 +1,35 @@
+.item {
+    width: 100%;
+    color: var(--text-color);
+    font-size: 17px;
+    text-align: start;
+    height: 35px;
+    /*margin: 8px 0;*/
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.item:hover {
+    background: rgba(141, 141, 141, 0.1);
+}
+
+ .active {
+    background: var(--selected-background);
+}
+
+.active:hover {
+    background: var(--selected-background-hover);
+
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    background: #9898983d;
+    margin-right: 10px;
+    border-radius: 8px;
+}

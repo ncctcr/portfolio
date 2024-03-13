@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+body {
+  margin: 0;
+  font-family: 'SF Pro Display', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  position: relative;
+  height: 100vh;
+  background: var(--general-background);
+  transition: background 0.5s ease, color 0.2s linear;
+}
+
+
+:root {
+  --general-background: white;
+  --content-background: rgba(255, 255, 255, 0.92);
+  --border-color: rgb(101 101 101 / 30%);
+  --text-color: #000000;
+  --second-text-color: rgba(72, 71, 71, 0.62);
+
+  /* Search  */
+  --search-background: rgb(0 0 0 / 9%);
+
+  /* Sidebar */
+  --selected-background: #9b9b9b4f;
+  --selected-background-hover: rgba(126, 126, 126, 0.31);
+
+  /* Switch */
+  --switch-background: #ffffff;
+}
+
+[data-theme='dark'] {
+  --general-background: #111213;
+  --content-background: rgba(39, 39, 39, 0.87);
+  --border-color: rgba(255, 255, 255, 0.3);
+  --dividing-border-color: black;
+  --text-color: #ffffff;
+  --second-text-color: #ffffff9e;
+
+  /* Search  */
+  --search-background: rgb(255 255 255 / 9%);
+
+  /* Sidebar */
+  --selected-background: #247ad952;
+  --selected-background-hover: #195aa352;
+
+  /* Switch */
+  --switch-background: #4f4f4f;
+}

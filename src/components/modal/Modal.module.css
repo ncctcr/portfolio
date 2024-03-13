@@ -1,0 +1,26 @@
+.tilt {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    width: 65%;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    max-width: 1250px;
+    max-height: 800px;
+}
+
+
+@media (max-width: 900px) {
+    .tilt {
+        height: 100%;
+        width: 100%;
+        max-width: none;
+        max-height: none;
+        border: none;
+        border-radius: 0;
+        backdrop-filter: blur(20px);
+    }
+
+}

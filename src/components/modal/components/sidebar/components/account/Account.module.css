@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 10px;
+}
+
+.wrapper img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.wrapper .information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px
+}
+
+.wrapper .information .name {
+    color: var(--text-color);
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+    /*margin-bottom: 5px*/
+}
+
+.wrapper .information .position {
+    padding: 0;
+    margin: 0;
+    color: var(--second-text-color);
+}
+
+
+

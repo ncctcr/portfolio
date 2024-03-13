@@ -1,0 +1,73 @@
+.wrapper {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    text-align: start;
+    position: relative;
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 30px 20px 30px;
+    margin-right: 5px;
+}
+
+/* total width */
+.wrapper::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0);
+    width: 10px;
+}
+
+/* background of the scrollbar except button or resizer */
+.wrapper::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* scrollbar itself */
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(143, 143, 143, 0.56);
+    border-radius: 16px;
+
+}
+
+/* set button(top and bottom of the scrollbar) */
+.wrapper::-webkit-scrollbar-button {
+    display:none;
+}
+
+
+
+.title {
+    width: 100%;
+    text-align: start;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 20px 0 10px 15px;
+}
+
+.block {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #00000003;
+}
+
+
+.item:not(:first-child) {
+    border-top: 1px solid var(--border-color)
+}
+
+.noHaveData {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    /*width: 100%;*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

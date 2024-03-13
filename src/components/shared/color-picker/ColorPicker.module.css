@@ -1,0 +1,13 @@
+.picker {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.picker::-webkit-color-swatch {
+    border-radius: 10px;
+    border: none;
+}
+.picker::-moz-color-swatch {
+    border-radius: 10px;
+    border: none;
+}

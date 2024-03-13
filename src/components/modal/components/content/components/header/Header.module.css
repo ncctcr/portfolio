@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 67px;
+    padding: 0 20px;
+}
+
+.wrapper p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.wrapper button {
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-right: 20px;
+}

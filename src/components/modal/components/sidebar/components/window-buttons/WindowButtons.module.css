@@ -1,0 +1,15 @@
+.buttons {
+    display: flex;
+    align-items: center;
+    width: 65px;
+    justify-content: space-between;
+    margin: 0 10px 20px 10px;
+}
+
+.buttons .circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}

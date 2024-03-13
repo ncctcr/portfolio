@@ -1,0 +1,16 @@
+.wrapper {
+    background: var(--content-background);
+    color: var(--text-color);
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+    width: 100%;
+    transition: background 0.5s ease, color 0.2s linear;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        border-radius: 0
+    }
+}

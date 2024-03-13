@@ -1,0 +1,31 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper input {
+    width: 90%;
+    height: 35px;
+    padding-left: 30px;
+    border-radius: 7px;
+    background: var(--search-background);
+    border: none;
+    font-size: 17px;
+    color: var(--text-color);
+    box-shadow: 0 1px 1px #ffffff75;
+}
+
+.wrapper {
+    position:relative;
+}
+
+.icon {
+    color: var(--text-color);
+    padding: 4px;
+    position: absolute;
+    box-sizing:border-box;
+    top:50%;
+    left:2px;
+    transform: translateY(-50%);
+}
+

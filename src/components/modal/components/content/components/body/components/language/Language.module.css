@@ -1,0 +1,17 @@
+.block {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #00000003;
+    cursor: pointer;
+}
+
+.item:not(:first-child) {
+    border-top: 1px solid var(--border-color)
+}
