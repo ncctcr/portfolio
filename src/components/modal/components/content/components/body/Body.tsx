@@ -7,6 +7,8 @@ import Window from "./components/window/Window";
 import {IView} from "../../../../../../interfaces";
 import {useTranslation} from "react-i18next";
 import Language from "./components/language/Language";
+import Account from "../../../sidebar/components/account/Account";
+import {ACCOUNT} from "../../../../../../constants";
 
 type PropsType = {
   view: IView | null;
@@ -16,8 +18,12 @@ type PropsType = {
 const Body: FC<PropsType> = ({ view, onClick}) => {
   const { t } = useTranslation()
   const getContent = (view: IView | null) => {
+    let content: any = []
+    if (view?.key === 'general' && window.innerWidth <= 768) {
+      content = [<Account data={ACCOUNT}/>]
+    }
     if (view && view.content && view.content.length > 0) {
-      return view.content.map((i, index) => {
+      content = [...content, view.content.flatMap((i, index) => {
         return (
           <div key={index}>
             <div className={styles.title}>{t(i.key)}</div>
@@ -31,9 +37,9 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
             </div>
           </div>
         )
-      })
+      })]
     }
-    return null
+    return content
   }
 
   const getLinks = (view: IView | null) => {

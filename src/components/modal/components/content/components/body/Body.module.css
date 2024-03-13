@@ -71,3 +71,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0 15px 20px 15px;
+    }
+}
