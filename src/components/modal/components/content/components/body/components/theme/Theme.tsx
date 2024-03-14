@@ -51,6 +51,7 @@ const Theme = () => {
             marks
             min={0}
             max={100}
+
             onChange={(e, value) => handleBlobBlur(value as number)}
             style={{maxWidth: 400}}
           />
