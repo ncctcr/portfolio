@@ -27,6 +27,7 @@ code {
   --general-background: white;
   --content-background: rgba(255, 255, 255, 0.92);
   --border-color: rgb(101 101 101 / 30%);
+  --diviver-color: rgb(101 101 101 / 30%);
   --text-color: #000000;
   --second-text-color: rgba(72, 71, 71, 0.62);
 
@@ -46,6 +47,7 @@ code {
   --general-background: #111213;
   --content-background: rgba(39, 39, 39, 0.87);
   --border-color: rgba(255, 255, 255, 0.3);
+  --diviver-color: rgba(255, 255, 255, 0.3);
   --dividing-border-color: black;
   --text-color: #ffffff;
   --second-text-color: #ffffff9e;
@@ -60,4 +62,29 @@ code {
   /* Switch */
   --switch-background: #4f4f4f;
   --disabled-switch-background: #91919140;
+}
+
+@media (max-width: 900px) {
+  [data-theme='dark'] {
+    --general-background: #111213;
+    --content-background: rgb(0 0 0);
+    --border-color: rgb(255 255 255 / 0%);
+    --diviver-color: #2a2a2b;
+    --body-block-background: #1d1d1e;
+    --dividing-border-color: black;
+    --text-color: #ffffff;
+    --second-text-color: #ffffff9e;
+
+    /* Search  */
+    --search-background: rgb(255 255 255 / 9%);
+
+    /* Sidebar */
+    --selected-background: #247ad952;
+    --selected-background-hover: #195aa352;
+
+    /* Switch */
+    --switch-background: #4f4f4f;
+    --disabled-switch-background: #91919140;
+  }
+
 }

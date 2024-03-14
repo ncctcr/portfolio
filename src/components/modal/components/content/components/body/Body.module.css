@@ -48,6 +48,7 @@
     border: 1px solid var(--border-color);
     border-radius: 8px;
     cursor: pointer;
+    background: var(--body-block-background);
 }
 
 .item {
@@ -60,7 +61,7 @@
 
 
 .item:not(:first-child) {
-    border-top: 1px solid var(--border-color)
+    border-top: 1px solid var(--diviver-color)
 }
 
 .noHaveData {
