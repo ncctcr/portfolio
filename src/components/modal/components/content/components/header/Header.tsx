@@ -28,9 +28,9 @@ const Header: FC<PropsType> = ({onClick}) => {
         <button onClick={onClick}>
           <FontAwesomeIcon icon={faAngleLeft}/>
         </button>
-      ) : <div style={{width: '40px'}}/>}
+      ) : <div style={{width: 44.5}}/>}
       <p>{t(currentKey)}</p>
-      <div style={{width: 44.5}}/>
+      <div style={{width: 44.5, height: 1}}/>
     </div>
   )
 }
