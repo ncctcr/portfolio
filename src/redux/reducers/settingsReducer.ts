@@ -1,9 +1,19 @@
-import {SET_THEME, SET_LANGUAGE, SET_BLOB_COLOR, SET_PARALLAX_MODE, SET_FULLSCREEN_MODE} from "../actions/types";
+import {
+  SET_THEME,
+  SET_LANGUAGE,
+  SET_BLOB_COLOR,
+  SET_PARALLAX_MODE,
+  SET_FULLSCREEN_MODE,
+  SET_BLOB_BLUR
+} from "../actions/types";
 
 type InitialState = {
   language: string
   theme: string
-  blobColor: string
+  blob: {
+    color: string
+    blur: number
+  }
   parallaxMode: boolean
   fullScreenMode: boolean
 }
@@ -11,7 +21,10 @@ type InitialState = {
 const initialState: InitialState = {
   language: 'en',
   theme: 'dark',
-  blobColor: '#0699B41C',
+  blob: {
+    color: '#0699B41C',
+    blur: 50
+  },
   parallaxMode: false,
   fullScreenMode: false,
 }
@@ -31,8 +44,19 @@ export const settingsReducer = (state = initialState, action: any) => {
     case SET_BLOB_COLOR:
       return {
         ...state,
-        blobColor: action.payload,
+        blob: {
+          ...state.blob,
+          color: action.payload
+        },
       };
+    case SET_BLOB_BLUR:
+      return {
+        ...state,
+        blob: {
+          ...state.blob,
+          blur: action.payload
+        }
+      }
     case SET_PARALLAX_MODE:
       return {
         ...state,
@@ -43,7 +67,6 @@ export const settingsReducer = (state = initialState, action: any) => {
         ...state,
         fullscreenMode: action.payload
       }
-
     default:
       return state;
   }

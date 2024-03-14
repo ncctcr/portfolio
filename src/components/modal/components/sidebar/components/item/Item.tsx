@@ -15,7 +15,7 @@ const Item: FC<PropsType> = ({dataKey, icon}) => {
   const dispatch = useDispatch()
   const [selected, setSelected] = useState(false)
   const historyKeys = useSelector((state: any) => state.data.historyKeys)
-  const blobColor = useSelector((state: any) => state.settings.blobColor)
+  const blobColor = useSelector((state: any) => state.settings.blob.color)
 
   useEffect(() => {
     if (historyKeys.length > 0) {

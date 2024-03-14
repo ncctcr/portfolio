@@ -5,11 +5,13 @@ import {generateSimilarColor, getRandomNumber} from "../../utils";
 type PropsType = {
   count?: number;
   blobColor?: string;
+  blur?: number
 }
 
 const Background: FC<PropsType> = ({
   count = 8,
   blobColor = '#0085FF',
+  blur = 20
 }) => {
 
   const getRandomAttribute = () => {
@@ -25,7 +27,8 @@ const Background: FC<PropsType> = ({
       top: `${getRandomNumber(0, 90)}%`,
       animation: `${styles.transform} ${transformTime}s ease-in-out infinite both alternate, 
                   ${styles.movementTwo} ${movementTwoTime}s ease-in-out infinite both`,
-      background: `${generateSimilarColor(blobColor)}`
+      background: `${generateSimilarColor(blobColor)}`,
+      filter: `blur(${blur}px)`
     }
   }
 

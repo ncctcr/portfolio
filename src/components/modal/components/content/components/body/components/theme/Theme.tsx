@@ -1,22 +1,33 @@
 import styles from './Theme.module.css'
-import {changeBlobColor, changeThemeAction} from "../../../../../../../../redux/actions/settingsActions";
+import {
+  changeBlobBlur,
+  changeBlobColor,
+  changeThemeAction
+} from "../../../../../../../../redux/actions/settingsActions";
 import {useDispatch, useSelector} from 'react-redux';
 import Switch from "../../../../../../../shared/switch/Switch";
 import ColorPicker from "../../../../../../../shared/color-picker/ColorPicker";
 import {useTranslation} from "react-i18next";
+import {Slider} from "@mui/material";
 const Theme = () => {
   const { t } = useTranslation()
   const dispatch = useDispatch();
   const theme = useSelector((state: any) => state.settings.theme);
-  const color = useSelector((state: any) => state.settings.blobColor);
+  const color = useSelector((state: any) => state.settings.blob.color);
+  const blur = useSelector((state: any) => state.settings.blob.blur);
 
   const toggleTheme = () => {
     dispatch(changeThemeAction(theme === 'light' ? 'dark' : 'light'));
   };
 
-  const setBlobColor = (color: string) => {
+  const handleBlobColor = (color: string) => {
     dispatch(changeBlobColor(color));
   };
+
+  const handleBlobBlur = (value: number) => {
+    dispatch(changeBlobBlur(value));
+  };
+
 
   return (
     <div className={styles.wrapper}>
@@ -27,7 +38,22 @@ const Theme = () => {
         </div>
         <div className={styles.item}>
           <span>{t('blob_color')}</span>
-          <ColorPicker color={color} setColor={setBlobColor}/>
+          <ColorPicker color={color} setColor={handleBlobColor}/>
+        </div>
+        <div className={styles.item}>
+          <span>Blob blur</span>
+          <Slider
+            aria-label="Temperature"
+            defaultValue={blur}
+            valueLabelDisplay="auto"
+            shiftStep={30}
+            step={10}
+            marks
+            min={0}
+            max={100}
+            onChange={(e, value) => handleBlobBlur(value as number)}
+            style={{maxWidth: 400}}
+          />
         </div>
       </div>
     </div>

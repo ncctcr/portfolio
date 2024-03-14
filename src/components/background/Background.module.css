@@ -14,6 +14,7 @@
     position: absolute;
     left: 75%;
     top: 40%;
+    /*transition: all 0.3s;*/
 }
 
 @keyframes transform
