@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1d60057a.css",
+    "main.css": "/portfolio/static/css/main.ff1b2402.css",
     "main.js": "/portfolio/static/js/main.c0080827.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/covid-challenge-hackathon.png": "/portfolio/static/media/covid-challenge-hackathon.c26fa5d265195efe6016.png",
     "static/media/react-using-typescript.png": "/portfolio/static/media/react-using-typescript.af0023861f264992cee3.png",
     "static/media/learning-typescript.png": "/portfolio/static/media/learning-typescript.0898ad94aafaf8362e31.png",
     "index.html": "/portfolio/index.html",
-    "main.1d60057a.css.map": "/portfolio/static/css/main.1d60057a.css.map",
+    "main.ff1b2402.css.map": "/portfolio/static/css/main.ff1b2402.css.map",
     "main.c0080827.js.map": "/portfolio/static/js/main.c0080827.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d60057a.css",
+    "static/css/main.ff1b2402.css",
     "static/js/main.c0080827.js"
   ]
 }
