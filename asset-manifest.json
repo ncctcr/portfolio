@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e6377eab.css",
-    "main.js": "/portfolio/static/js/main.a5ef0e4c.js",
+    "main.css": "/portfolio/static/css/main.31f3911d.css",
+    "main.js": "/portfolio/static/js/main.4df7bf3c.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/covid-challenge-hackathon.png": "/portfolio/static/media/covid-challenge-hackathon.c26fa5d265195efe6016.png",
     "static/media/react-using-typescript.png": "/portfolio/static/media/react-using-typescript.af0023861f264992cee3.png",
     "static/media/learning-typescript.png": "/portfolio/static/media/learning-typescript.0898ad94aafaf8362e31.png",
     "index.html": "/portfolio/index.html",
-    "main.e6377eab.css.map": "/portfolio/static/css/main.e6377eab.css.map",
-    "main.a5ef0e4c.js.map": "/portfolio/static/js/main.a5ef0e4c.js.map",
+    "main.31f3911d.css.map": "/portfolio/static/css/main.31f3911d.css.map",
+    "main.4df7bf3c.js.map": "/portfolio/static/js/main.4df7bf3c.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6377eab.css",
-    "static/js/main.a5ef0e4c.js"
+    "static/css/main.31f3911d.css",
+    "static/js/main.4df7bf3c.js"
   ]
 }
