@@ -1,5 +1,5 @@
 import styles from './Body.module.css'
-import {FC} from "react";
+import {FC, ReactElement, ReactNode, useEffect, useRef} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleRight} from "@fortawesome/free-solid-svg-icons";
 import Theme from "./components/theme/Theme";
@@ -18,6 +18,14 @@ type PropsType = {
 
 const Body: FC<PropsType> = ({ view, onClick}) => {
   const { t } = useTranslation()
+  const contentRef = useRef<any>(null)
+
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
+  }, [view, contentRef]);
+
   const getContent = (view: IView | null) => {
     let content: any = []
     if (view?.key === 'general' && window.innerWidth <= 768) {
@@ -76,7 +84,7 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} ref={contentRef}>
       {view ? (
         <motion.div
           key={view.key}
