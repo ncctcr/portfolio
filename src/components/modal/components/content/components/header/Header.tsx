@@ -25,12 +25,11 @@ const Header: FC<PropsType> = ({onClick}) => {
   return (
     <div className={styles.wrapper}>
       {currentKey !== 'general' ? (
-        <button onClick={onClick}>
+        <button onClick={onClick} className={styles.back}>
           <FontAwesomeIcon icon={faAngleLeft}/>
         </button>
-      ) : <div style={{width: 44.5}}/>}
+      ) : null}
       <p>{t(currentKey)}</p>
-      <div style={{width: 44.5, height: 1}}/>
     </div>
   )
 }
