@@ -83,7 +83,7 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
         >
           {view && view.key === 'theme' ? <Theme/> : null}
           {view && view.key === 'window' ? <Window /> : null}

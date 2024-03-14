@@ -45,7 +45,7 @@ code {
 
 [data-theme='dark'] {
   --general-background: #111213;
-  --content-background: rgba(39, 39, 39, 0.87);
+  --content-background: rgba(39, 39, 39, 0.95);
   --border-color: rgba(255, 255, 255, 0.3);
   --diviver-color: rgba(255, 255, 255, 0.3);
   --dividing-border-color: black;

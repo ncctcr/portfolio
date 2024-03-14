@@ -39,8 +39,8 @@ const Content = () => {
 
   return (
     <div className={styles.wrapper}>
-      <Header onClick={handleBack}/>
       <AnimatePresence mode="wait" key='content'>
+        <Header onClick={handleBack}/>
         <Body view={currentView} onClick={handleClick}/>
       </AnimatePresence>
     </div>
