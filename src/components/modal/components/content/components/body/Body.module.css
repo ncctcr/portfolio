@@ -75,7 +75,7 @@
 
 @media (max-width: 900px) {
     .wrapper {
-        padding: 0 15px 100px;
+        padding: 0 15px 120px;
         margin: 0;
     }
     .wrapper::-webkit-scrollbar {
