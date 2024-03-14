@@ -19,10 +19,10 @@ const Window = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.block}>
-        <div className={styles.item}>
-          <span>Parallax mode</span>
-          <Switch onClick={toggleParallaxMode} checked={parallaxMode} disabled={fullscreenMode}/>
-        </div>
+        {/*<div className={styles.item}>*/}
+        {/*  <span>Parallax mode</span>*/}
+        {/*  <Switch onClick={toggleParallaxMode} checked={parallaxMode} disabled={fullscreenMode}/>*/}
+        {/*</div>*/}
         <div className={styles.item}>
           <span>Fullscreen mode</span>
           <Switch onClick={toggleFullscreenMode} checked={fullscreenMode}/>

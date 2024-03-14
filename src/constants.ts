@@ -39,7 +39,7 @@ export const SIDEBAR = [
   {title: 'Licenses & certifications', key: 'licenses_and_certification', icon: ICONS.LICENSES_AND_CERTIFICATION, br: false},
   {title: 'Contacts', key: 'contacts', icon: ICONS.CONTACTS, br: true},
   {title: 'Theme', key: 'theme', icon: ICONS.SETTINGS, br: false},
-  {title: 'Window', key: 'window', icon: ICONS.SETTINGS, br: false},
+  // {title: 'Window', key: 'window', icon: ICONS.SETTINGS, br: false},
   {title: 'Language', key: 'language', icon: ICONS.SETTINGS, br: false},
 ]
 
@@ -98,7 +98,7 @@ const GENERAL: IView = {
         key: 'settings',
         links: [
           {title: 'Theme', key: 'theme'},
-          {title: 'Window', key: 'window'},
+          // {title: 'Window', key: 'window'},
           {title: 'Language', key: 'language'},
         ]
       }

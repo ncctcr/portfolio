@@ -30,6 +30,7 @@ const Header: FC<PropsType> = ({onClick}) => {
         </button>
       ) : <div style={{width: '40px'}}/>}
       <p>{t(currentKey)}</p>
+      <div style={{width: 44.5}}/>
     </div>
   )
 }
