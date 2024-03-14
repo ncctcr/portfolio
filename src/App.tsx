@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className="App" data-theme={theme}>
-      <Background count={8} blobColor={blobColor} blur={blur}/>
+      {window.innerWidth <= 768 ? null : <Background count={8} blobColor={blobColor} blur={blur}/> }
       <Modal />
     </div>
   );

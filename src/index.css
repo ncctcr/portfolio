@@ -65,6 +65,12 @@ code {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --content-background: #f3f2f8;
+    --body-block-background: #FFF;
+    --border-color: rgba(255, 255, 255, 0);
+    --diviver-color: #dedede;
+  }
   [data-theme='dark'] {
     --general-background: #111213;
     --content-background: rgb(0 0 0);
@@ -86,5 +92,4 @@ code {
     --switch-background: #4f4f4f;
     --disabled-switch-background: #91919140;
   }
-
 }
