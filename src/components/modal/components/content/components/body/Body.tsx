@@ -95,7 +95,7 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
         >
           {view && view.key === 'theme' ? <Theme/> : null}
           {view && view.key === 'window' ? <Window /> : null}
-          {view && view.key === 'language' ? <Language /> : null}
+          {/*{view && view.key === 'language' ? <Language /> : null}*/}
           {getContent(view)}
           {getLinks(view)}
         </motion.div>

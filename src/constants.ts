@@ -40,7 +40,7 @@ export const SIDEBAR = [
   {title: 'Contacts', key: 'contacts', icon: ICONS.CONTACTS, br: true},
   {title: 'Theme', key: 'theme', icon: ICONS.SETTINGS, br: false},
   // {title: 'Window', key: 'window', icon: ICONS.SETTINGS, br: false},
-  {title: 'Language', key: 'language', icon: ICONS.SETTINGS, br: false},
+  // {title: 'Language', key: 'language', icon: ICONS.SETTINGS, br: false},
 ]
 
 const noDataContent = {
@@ -99,7 +99,7 @@ const GENERAL: IView = {
         links: [
           {title: 'Theme', key: 'theme'},
           // {title: 'Window', key: 'window'},
-          {title: 'Language', key: 'language'},
+          // {title: 'Language', key: 'language'},
         ]
       }
     ]
