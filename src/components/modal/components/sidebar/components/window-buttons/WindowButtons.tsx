@@ -10,9 +10,16 @@ const WindowButtons = () => {
     dispatch(setFullscreenMode(!fullscreenMode))
   }
 
+  const handleClose = () => {
+    const confirmed = window.confirm('Do you really want to close the tab?');
+    if (confirmed) {
+      window.close();
+    }
+  };
+
   return (
     <div className={styles.buttons}>
-      <div className={styles.circle} style={{background: '#ff6057'}}></div>
+      <div className={styles.circle} onClick={() => handleClose()} style={{background: '#ff6057'}}></div>
       <div className={styles.circle} style={{background: '#fabe31'}}></div>
       <div className={styles.circle} onClick={toggleFullscreenMode} style={{background: '#2ac73f'}}></div>
     </div>
