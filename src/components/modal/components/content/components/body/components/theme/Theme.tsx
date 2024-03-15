@@ -34,7 +34,7 @@ const Theme = () => {
       <div className={styles.block}>
         <div className={styles.item}>
           <span>{t('dark_mode')}</span>
-          <Switch onClick={toggleTheme} checked={theme === 'dark'}/>
+          <Switch onChange={toggleTheme} checked={theme === 'dark'}/>
         </div>
         <div className={styles.item}>
           <span>{t('blob_color')}</span>
@@ -51,7 +51,7 @@ const Theme = () => {
             marks
             min={0}
             max={100}
-
+            value={blur}
             onChange={(e, value) => handleBlobBlur(value as number)}
             style={{maxWidth: 400}}
           />

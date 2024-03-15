@@ -30,7 +30,7 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
     let content: any = []
     if (view?.key === 'general' && window.innerWidth <= 768) {
       content = [
-        <div className={styles.block}>
+        <div className={styles.block} key={'account'}>
           <Account data={ACCOUNT}/>
         </div>
       ]

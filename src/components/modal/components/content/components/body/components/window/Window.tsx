@@ -25,7 +25,7 @@ const Window = () => {
         {/*</div>*/}
         <div className={styles.item}>
           <span>Fullscreen mode</span>
-          <Switch onClick={toggleFullscreenMode} checked={fullscreenMode}/>
+          <Switch onChange={toggleFullscreenMode} checked={fullscreenMode}/>
         </div>
       </div>
     </div>
