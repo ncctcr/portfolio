@@ -30,8 +30,8 @@ const Background: FC<PropsType> = ({
       blobs.push({
         left: `${getRandomNumber(0, 90)}%`,
         top: `${getRandomNumber(0, 90)}%`,
-        width: getRandomNumber(50, 600),
-        height: getRandomNumber(50, 600),
+        width: getRandomNumber(300, 600),
+        height: getRandomNumber(300, 600),
         transformTime: getRandomNumber(10, 40),
         movementTwoTime: getRandomNumber(10, 40)
       });
