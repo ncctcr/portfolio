@@ -9,7 +9,7 @@ interface PageProps {
   isFirstRender: boolean
 }
 
-const transition = {  ease: [0.10, 0.80, 0.90, 1], duration: 0.3 };
+const transition = {  ease: [0.10, 0.90, 0.95, 1], duration: 0.3 };
 
 const AnimatedView: React.FC<PageProps> = ({ children, isBackward, isFirstRender }) => {
   const screenSize = useScreenSize()

@@ -374,8 +374,8 @@ const EXPERIENCE: IView = {
       text: 'This view describes the experience of working in different companies'
     },
     {
-      title: 'May 2022 - Present (1yr 10mos)',
-      key: 'May 2022 - Present (1yr 10mos)',
+      title: 'May 2022 - Present',
+      key: 'May 2022 - Present',
       innerHTML: `
         <b>Frontend Developer</b>
         <span>(Handiscover)</span>
@@ -393,8 +393,8 @@ const EXPERIENCE: IView = {
       `
     },
     {
-      title: 'January 2022 - May 2022 (5mos)',
-      key: 'January 2022 - May 2022 (5mos)',
+      title: 'January 2022 - May 2022',
+      key: 'January 2022 - May 2022',
       innerHTML: `
         <b>Frontend Developer</b>
         <span>(EPAM Systems)</span>
@@ -408,8 +408,8 @@ const EXPERIENCE: IView = {
       `
     },
     {
-      title: 'April 2021 - December 2021 (9mos)',
-      key: 'April 2021 - December 2021 (9mos)',
+      title: 'April 2021 - December 2021',
+      key: 'April 2021 - December 2021',
       innerHTML: `
         <b>Frontend Developer</b>
         <span>(Forex Tester Software)</span>
@@ -423,8 +423,8 @@ const EXPERIENCE: IView = {
       `
     },
     {
-      title: 'May 2019 - March 2021 (1yr 11mos)',
-      key: 'May 2019 - March 2021 (1yr 11mos)',
+      title: 'May 2019 - March 2021',
+      key: 'May 2019 - March 2021',
       innerHTML: `
         <b>Frontend & Backend Developer</b>
         <span>(BeHealthy.AI)</span>
