@@ -8,28 +8,28 @@ import { motion } from "framer-motion";
 
 type PropsType = {
   onClick: () => void
+  isBackward: boolean
 }
 
-const Header: FC<PropsType> = ({onClick}) => {
+const Header: FC<PropsType> = ({onClick, isBackward}) => {
   const { t } = useTranslation()
   const currentKey = useSelector((state: any) => state.data.currentKey);
 
   return (
     <motion.div
+      className={styles.wrapper}
       key={currentKey}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
     >
-      <div className={styles.wrapper}>
-        {currentKey !== 'general' ? (
-          <button onClick={onClick} className={styles.back}>
-            <FontAwesomeIcon icon={faAngleLeft}/>
-          </button>
-        ) : null}
-        <p>{t(currentKey)}</p>
-      </div>
+      {currentKey !== 'general' ? (
+        <button onClick={onClick} className={styles.back}>
+          <FontAwesomeIcon icon={faAngleLeft}/>
+        </button>
+      ) : null}
+      <p>{t(currentKey)}</p>
     </motion.div>
   )
 }

@@ -9,12 +9,16 @@ import Switch from "../../../../../../../shared/switch/Switch";
 import ColorPicker from "../../../../../../../shared/color-picker/ColorPicker";
 import {useTranslation} from "react-i18next";
 import {Slider} from "@mui/material";
+import useScreenSize from "../../../../../../../../hooks/useScreenSize";
+import {TABLET_WIDTH} from "../../../../../../../../constants";
 const Theme = () => {
   const { t } = useTranslation()
   const dispatch = useDispatch();
   const theme = useSelector((state: any) => state.settings.theme);
   const color = useSelector((state: any) => state.settings.blob.color);
   const blur = useSelector((state: any) => state.settings.blob.blur);
+  const screenSize = useScreenSize()
+  const isMobile = screenSize.width <= TABLET_WIDTH
 
   const toggleTheme = () => {
     dispatch(changeThemeAction(theme === 'light' ? 'dark' : 'light'));
@@ -36,26 +40,30 @@ const Theme = () => {
           <span>{t('dark_mode')}</span>
           <Switch onChange={toggleTheme} checked={theme === 'dark'}/>
         </div>
-        <div className={styles.item}>
-          <span>{t('blob_color')}</span>
-          <ColorPicker color={color} setColor={handleBlobColor}/>
-        </div>
-        <div className={styles.item}>
-          <span>Blob blur</span>
-          <Slider
-            aria-label="Temperature"
-            defaultValue={blur}
-            valueLabelDisplay="auto"
-            shiftStep={30}
-            step={10}
-            marks
-            min={0}
-            max={100}
-            value={blur}
-            onChange={(e, value) => handleBlobBlur(value as number)}
-            style={{maxWidth: 400}}
-          />
-        </div>
+        {!isMobile ? (
+          <>
+            <div className={styles.item}>
+              <span>{t('blob_color')}</span>
+              <ColorPicker color={color} setColor={handleBlobColor}/>
+            </div>
+            <div className={styles.item}>
+              <span>Blob blur</span>
+              <Slider
+                aria-label="Temperature"
+                defaultValue={blur}
+                valueLabelDisplay="auto"
+                shiftStep={30}
+                step={10}
+                marks
+                min={0}
+                max={100}
+                value={blur}
+                onChange={(e, value) => handleBlobBlur(value as number)}
+                style={{maxWidth: 400}}
+              />
+            </div>
+          </>
+        ) : null}
       </div>
     </div>
   )

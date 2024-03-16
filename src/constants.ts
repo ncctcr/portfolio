@@ -3,6 +3,8 @@ import learningTypescript from "./assets/images/learning-typescript.png"
 import reactUsingTypescript from "./assets/images/react-using-typescript.png"
 import covidChallengeHackathon from "./assets/images/covid-challenge-hackathon.png"
 
+export const TABLET_WIDTH = 900
+
 export const ICONS: {[key: string]: string} = {
   MUI: 'https://mui.com/static/logo.png',
   REACT: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',

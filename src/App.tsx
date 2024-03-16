@@ -5,6 +5,8 @@ import Background from "./components/background/Background";
 import {useDispatch, useSelector} from 'react-redux';
 import {changeThemeAction} from "./redux/actions/settingsActions";
 import useThemeDetector from "./hooks/useThemeDetector";
+import useScreenSize from "./hooks/useScreenSize";
+import {TABLET_WIDTH} from "./constants";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -12,6 +14,8 @@ const App = () => {
   const blobColor = useSelector((state: any) => state.settings.blob.color);
   const blur = useSelector((state: any) => state.settings.blob.blur);
   const isDarkTheme = useThemeDetector();
+  const screenSize = useScreenSize()
+  const isMobile = screenSize.width <= TABLET_WIDTH
 
   useEffect(() => {
     dispatch(changeThemeAction(isDarkTheme ? 'dark' : 'light'));
@@ -19,7 +23,7 @@ const App = () => {
 
   return (
     <div className="App" data-theme={theme}>
-      {window.innerWidth <= 768 ? null : <Background count={8} blobColor={blobColor} blur={blur}/> }
+      {isMobile ? null : <Background count={8} blobColor={blobColor} blur={blur}/> }
       <Modal />
     </div>
   );

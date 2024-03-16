@@ -7,6 +7,9 @@ import {useSelector} from 'react-redux'
 import {removeHistoryKey, setCurrentKey, setHistoryKey} from "../../../../redux/actions/dataActions";
 import {IView} from "../../../../interfaces";
 import { AnimatePresence } from "framer-motion";
+import AnimatedView from "../../../shared/animated-view/AnimatedView";
+import useScreenSize from "../../../../hooks/useScreenSize";
+import {TABLET_WIDTH} from "../../../../constants";
 
 const Content = () => {
   const dispatch = useDispatch()
@@ -14,6 +17,16 @@ const Content = () => {
   const currentKey = useSelector((state: any) => state.data.currentKey)
   const historyKeys = useSelector((state: any) => state.data.historyKeys)
   const views = useSelector((state: any) => state.data.views)
+  const [isBackward, setIsBackward] = useState(false);
+  const screenSize = useScreenSize()
+  const isMobile = screenSize.width <= TABLET_WIDTH
+  const [isFirstRender, setIsFirstRender] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsFirstRender(false)
+    }, 100)
+  }, []);
 
   useEffect(() => {
     const view = views.find((i: any) => i.key === currentKey)
@@ -30,20 +43,24 @@ const Content = () => {
   }, [historyKeys]);
 
   const handleClick = (key: string) => {
+    setIsBackward(false)
     dispatch(setHistoryKey(key))
   }
 
   const handleBack = () => {
+    setIsBackward(true)
     dispatch(removeHistoryKey())
   }
 
   return (
     <div className={styles.wrapper}>
-      <AnimatePresence mode="wait" key='header'>
-        <Header onClick={handleBack}/>
+      <AnimatePresence>
+        <Header onClick={handleBack} isBackward={isBackward}/>
       </AnimatePresence>
-      <AnimatePresence mode="wait" key='content'>
-        <Body view={currentView} onClick={handleClick}/>
+      <AnimatePresence mode={isMobile ? 'sync' : 'wait'} key='content' custom={isBackward}>
+        <AnimatedView isFirstRender={isFirstRender} isBackward={isBackward} key={currentView ? currentView.key : 'empty'}>
+          <Body view={currentView} onClick={handleClick}/>
+        </AnimatedView>
       </AnimatePresence>
     </div>
   )
