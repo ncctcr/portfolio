@@ -9,7 +9,7 @@ interface PageProps {
   isFirstRender: boolean
 }
 
-const transition = {  ease: [0.10, 0.90, 0.95, 1], duration: 0.4 };
+const transition = {  ease: [0.10, 0.90, 0.95, 1], duration: 0.35 };
 
 const AnimatedView: React.FC<PageProps> = ({ children, isBackward, isFirstRender }) => {
   const screenSize = useScreenSize()
@@ -38,20 +38,26 @@ const AnimatedView: React.FC<PageProps> = ({ children, isBackward, isFirstRender
         transitionEnd: {
           position: 'static',
           top: 0,
-          overflow: 'auto'
+          overflow: 'auto',
         }
       },
       initial: {
         x: isFirstRender ? 0 : isBackward ? '-30%' : '100%',
         boxShadow: isBackward ? null : '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
         zIndex: 2,
-        transition
+        transition,
+        transitionEnd: {
+          boxShadow: 'unset',
+        }
       },
       exit: {
         x: isFirstRender ? 0 : isBackward ? '100%' : '-30%',
         boxShadow: isBackward ? '0 25px 50px -12px rgba(0, 0, 0, 0.5)' : null,
         zIndex: isBackward ? 3 : 1,
-        transition
+        transition,
+        transitionEnd: {
+          boxShadow: 'unset',
+        }
       }
     };
   }
