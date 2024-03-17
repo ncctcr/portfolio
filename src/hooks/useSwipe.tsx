@@ -1,0 +1,45 @@
+import {TouchEventHandler, useState} from "react";
+
+interface SwipeInput {
+  onSwipedLeft: () => void
+  onSwipedRight: () => void
+}
+
+interface SwipeOutput {
+  onTouchStart: TouchEventHandler<HTMLDivElement>
+  onTouchMove: TouchEventHandler<HTMLDivElement>
+  onTouchEnd: () => void
+}
+
+export default (input: SwipeInput): SwipeOutput => {
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart: TouchEventHandler<HTMLDivElement> = (e) => {
+    setTouchEnd(0); // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX);
+  }
+
+  const onTouchMove: TouchEventHandler<HTMLDivElement> = (e) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      input.onSwipedLeft();
+    }
+    if (isRightSwipe) {
+      input.onSwipedRight();
+    }
+  }
+
+  return {
+    onTouchStart,
+    onTouchMove,
+    onTouchEnd
+  }
+}

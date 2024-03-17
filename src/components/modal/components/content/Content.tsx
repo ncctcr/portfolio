@@ -10,6 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import AnimatedView from "../../../shared/animated-view/AnimatedView";
 import useScreenSize from "../../../../hooks/useScreenSize";
 import {TABLET_WIDTH} from "../../../../constants";
+import useSwipe from "../../../../hooks/useSwipe";
 
 const Content = () => {
   const dispatch = useDispatch()
@@ -21,6 +22,15 @@ const Content = () => {
   const screenSize = useScreenSize()
   const isMobile = screenSize.width <= TABLET_WIDTH
   const [isFirstRender, setIsFirstRender] = useState(true)
+
+  const swipeHandlers = useSwipe({
+    onSwipedLeft: () => {},
+    onSwipedRight: () => {
+      if (currentKey !== 'general') {
+        handleBack()
+      }
+    }
+  });
 
   useEffect(() => {
     setTimeout(() => {
@@ -51,9 +61,8 @@ const Content = () => {
     setIsBackward(true)
     dispatch(removeHistoryKey())
   }
-
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} {...swipeHandlers}>
       <AnimatePresence>
         <Header onClick={handleBack} isBackward={isBackward}/>
       </AnimatePresence>
