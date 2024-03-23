@@ -1,7 +1,7 @@
 import styles from './Theme.module.css'
 import {
   changeBlobBlur,
-  changeBlobColor,
+  changeBlobColor, changeBlobCount,
   changeThemeAction
 } from "../../../../../../../../redux/actions/settingsActions";
 import {useDispatch, useSelector} from 'react-redux';
@@ -17,6 +17,7 @@ const Theme = () => {
   const theme = useSelector((state: any) => state.settings.theme);
   const color = useSelector((state: any) => state.settings.blob.color);
   const blur = useSelector((state: any) => state.settings.blob.blur);
+  const blobCount = useSelector((state: any) => state.settings.blob.count);
   const screenSize = useScreenSize()
   const isMobile = screenSize.width <= TABLET_WIDTH
 
@@ -30,6 +31,10 @@ const Theme = () => {
 
   const handleBlobBlur = (value: number) => {
     dispatch(changeBlobBlur(value));
+  };
+
+  const handleBlobCount = (value: number) => {
+    dispatch(changeBlobCount(value));
   };
 
 
@@ -49,7 +54,7 @@ const Theme = () => {
             <div className={styles.item}>
               <span>Blob blur</span>
               <Slider
-                aria-label="Temperature"
+                aria-label="Blob blur"
                 defaultValue={blur}
                 valueLabelDisplay="auto"
                 shiftStep={30}
@@ -59,6 +64,22 @@ const Theme = () => {
                 max={100}
                 value={blur}
                 onChange={(e, value) => handleBlobBlur(value as number)}
+                style={{maxWidth: 400}}
+              />
+            </div>
+            <div className={styles.item}>
+              <span>Blob count</span>
+              <Slider
+                aria-label="Blob count"
+                defaultValue={blobCount}
+                valueLabelDisplay="auto"
+                shiftStep={2}
+                step={2}
+                marks
+                min={0}
+                max={30}
+                value={blobCount}
+                onChange={(e, value) => handleBlobCount(value as number)}
                 style={{maxWidth: 400}}
               />
             </div>

@@ -13,6 +13,7 @@ const App = () => {
   const theme = useSelector((state: any) => state.settings.theme);
   const blobColor = useSelector((state: any) => state.settings.blob.color);
   const blur = useSelector((state: any) => state.settings.blob.blur);
+  const blobCount = useSelector((state: any) => state.settings.blob.count);
   const isDarkTheme = useThemeDetector();
   const screenSize = useScreenSize()
   const isMobile = screenSize.width <= TABLET_WIDTH
@@ -23,7 +24,7 @@ const App = () => {
 
   return (
     <div className="App" data-theme={theme}>
-      {isMobile ? null : <Background count={8} blobColor={blobColor} blur={blur}/> }
+      {isMobile ? null : <Background count={blobCount} blobColor={blobColor} blur={blur}/> }
       <Modal />
     </div>
   );

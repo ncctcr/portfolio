@@ -5,7 +5,7 @@ import {
   SET_BLOB_COLOR,
   SET_PARALLAX_MODE,
   SET_FULLSCREEN_MODE,
-  SET_BLOB_BLUR
+  SET_BLOB_BLUR, SET_BLOB_COUNT
 } from './types';
 
 export const changeThemeAction = (payload: 'dark' | 'light') => {
@@ -31,6 +31,13 @@ export const changeBlobColor = (payload: string) => {
 export const changeBlobBlur = (payload: number) => {
   return {
     type: SET_BLOB_BLUR,
+    payload,
+  };
+};
+
+export const changeBlobCount = (payload: number) => {
+  return {
+    type: SET_BLOB_COUNT,
     payload,
   };
 };

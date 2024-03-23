@@ -4,7 +4,7 @@ import {
   SET_BLOB_COLOR,
   SET_PARALLAX_MODE,
   SET_FULLSCREEN_MODE,
-  SET_BLOB_BLUR
+  SET_BLOB_BLUR, SET_BLOB_COUNT
 } from "../actions/types";
 
 type InitialState = {
@@ -13,6 +13,7 @@ type InitialState = {
   blob: {
     color: string
     blur: number
+    count: number
   }
   parallaxMode: boolean
   fullScreenMode: boolean
@@ -23,7 +24,8 @@ const initialState: InitialState = {
   theme: 'dark',
   blob: {
     color: '#0699B41C',
-    blur: 50
+    blur: 50,
+    count: 10,
   },
   parallaxMode: false,
   fullScreenMode: false,
@@ -55,6 +57,14 @@ export const settingsReducer = (state = initialState, action: any) => {
         blob: {
           ...state.blob,
           blur: action.payload
+        }
+      }
+    case SET_BLOB_COUNT:
+      return {
+        ...state,
+        blob: {
+          ...state.blob,
+          count: action.payload
         }
       }
     case SET_PARALLAX_MODE:
