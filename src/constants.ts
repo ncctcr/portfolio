@@ -538,7 +538,7 @@ const EDUCATION: IView = {
       key: 'kherson_state_university',
       text: "Bachelor's degree, software engineer. 2016 - 2021",
       innerHTML: `
-        <img src="${Bachelor}" alt='Bachelor' style="margin-top: 15px; width: 100%; border-radius: 8px"/>
+        <img src="${Bachelor}" alt='Bachelor' style="margin-top: 15px; width: 100%; border-radius: 7px"/>
       `
     },
     // {
@@ -564,21 +564,21 @@ const LICENCES_AND_CERTIFICATIONS: IView = {
       title: 'Learning TypeScript',
       key: 'learning_typescript',
       innerHTML: `
-          <img style="width: 100%; height: 100%" src="${learningTypescript}"/>
+          <img style="width: 100%; height: 100%; border-radius: 7px" src="${learningTypescript}"/>
         `
     },
     {
       title: 'React: Using TypeScript',
       key: 'react_using_typescript',
       innerHTML: `
-          <img style="width: 100%; height: 100%" src="${reactUsingTypescript}"/>
+          <img style="width: 100%; height: 100%; border-radius: 7px" src="${reactUsingTypescript}"/>
         `
     },
     {
       title: 'Covid Challenge Hackathon',
       key: 'Covid Challenge Hackathon',
       innerHTML: `
-          <img style="width: 100%; height: 100%" src="${covidChallengeHackathon}"/>
+          <img style="width: 100%; height: 100%; border-radius: 7px" src="${covidChallengeHackathon}"/>
         `
     },
   ]
