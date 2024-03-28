@@ -77,7 +77,7 @@ const Theme = () => {
                 step={2}
                 marks
                 min={0}
-                max={30}
+                max={20}
                 value={blobCount}
                 onChange={(e, value) => handleBlobCount(value as number)}
                 style={{maxWidth: 400}}

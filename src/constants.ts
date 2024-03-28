@@ -1,13 +1,17 @@
 import {IAccount, IView} from "./interfaces";
-import learningTypescript from "./assets/images/learning-typescript.png"
-import reactUsingTypescript from "./assets/images/react-using-typescript.png"
-import covidChallengeHackathon from "./assets/images/covid-challenge-hackathon.png"
+import learningTypescript from "./assets/images/certificates/learning-typescript.png"
+import reactUsingTypescript from "./assets/images/certificates/react-using-typescript.png"
+import covidChallengeHackathon from "./assets/images/certificates/covid-challenge-hackathon.png"
+import Avatar from "./assets/images/avatar.jpeg"
+import MuiIcon from './assets/icons/mui.png'
+import ReactIcon from './assets/icons/react.png'
+import Bachelor from './assets/images/bachelor.png'
 
 export const TABLET_WIDTH = 900
 
 export const ICONS: {[key: string]: string} = {
-  MUI: 'https://mui.com/static/logo.png',
-  REACT: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
+  MUI: MuiIcon,
+  REACT: ReactIcon,
   HTML: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
   CSS: 'https://cdn-icons-png.flaticon.com/512/732/732190.png',
   JS: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png',
@@ -31,7 +35,7 @@ export const ICONS: {[key: string]: string} = {
 export const ACCOUNT: IAccount = {
   name: 'Mykola Nesterchuk',
   position: 'Frontend Developer',
-  avatar: 'https://sun9-35.userapi.com/impg/rzG38QhsnvkU2hRStbd4NVdjQKJ6RAnrvCPB1w/qe0wx8heN90.jpg?size=1755x1755&quality=95&sign=56897b54284f407ff8ad015a4cf03f79&type=album'
+  avatar: Avatar
 }
 
 export const SIDEBAR = [
@@ -59,7 +63,7 @@ const GENERAL: IView = {
         title: 'Message',
         key: 'Message',
         innerHTML: `
-          <p style="margin-top: 0">Hello there!</p>
+          <p style="margin-top: 0">Hello there!👋</p>
           <p style="margin-bottom: 0">
             I am a frontend developer who specializes in ReactJS. I
             have a total of 4 years of experience working with web applications and
@@ -321,32 +325,115 @@ const TYPESCRIPT: IView = {
 const REDUX: IView = {
   title: 'Redux',
   key: 'redux',
-  content: [noDataContent],
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'Redux - is an open-source JavaScript library for application state management.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
+      <p style="margin-top: 0">In my journey as a frontend developer, Redux has been a cornerstone in my projects, enabling me to efficiently manage application state.</p>
+      <p>I've seamlessly integrated Redux with React components, ensuring a centralized and predictable state container.</p>
+      <p>This integration facilitated smoother data flow throughout the applications, allowing me to develop complex features with ease.</p>
+      <p>One of the key aspects of my experience with Redux lies in its role in enhancing scalability.</p>
+      <p style="margin-bottom: 0">By adopting Redux, I've been able to handle larger datasets and more intricate user interactions, ensuring that the applications remain responsive and adaptable to evolving requirements.</p>
+      `
+    }
+  ],
 }
 
 const MUI: IView = {
   title: 'MUI & Material UI',
   key: 'mui',
-  content: [noDataContent],
-
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'MUI - is an open-source React component library that implements Google\'s Material Design. It\'s comprehensive and can be used in production out of the box.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
+      <p style="margin-top: 0">In my frontend development endeavors, Material-UI (MUI) has been an invaluable resource, empowering me to create stunning and highly functional user interfaces with ease.</p>
+      <p>Integrating MUI into my projects has enabled me to leverage a rich set of pre-designed React components, speeding up development and ensuring consistency in UI design.</p>
+      <p>MUI's extensive component library has been instrumental in crafting responsive and visually appealing user interfaces.</p>
+      <p>I've utilized components such as buttons, cards, dialogs, and form elements to build intuitive user experiences that align with modern design principles.</p>
+      <p style="margin-bottom: 0">The flexibility and customization options offered by MUI components have allowed me to tailor UI elements to suit the specific needs and branding of each project.</p>
+      `
+    }
+  ],
 }
 
 const AXIOS: IView = {
   title: 'Axios',
   key: 'axios',
-  content: [noDataContent],
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'MUI - is an open-source React component library that implements Google\'s Material Design. It\'s comprehensive and can be used in production out of the box.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
+      <p style="margin-top: 0">One of the primary ways I've utilized Axios is to perform asynchronous operations, such as fetching data from RESTful APIs.</p>
+      <p>Its intuitive syntax and promise-based approach have made it straightforward to make HTTP requests and handle responses efficiently.</p>
+      <p>By leveraging Axios, I've been able to streamline the process of fetching data and updating the application's state accordingly.</p>
+      <p>Moreover, Axios has provided me with flexibility in handling different types of requests, including GET, POST, PUT, and DELETE.</p>
+      <p style="margin-bottom: 0">This versatility has allowed me to interact with backend APIs seamlessly, whether it's retrieving user information, submitting form data, or updating resource records.</p>
+      `
+    }
+  ],
 }
 
 const CHARTJS: IView = {
   title: 'Chart.js',
   key: 'chartjs',
-  content: [noDataContent],
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'Chart.js - is a free, open-source JavaScript library for data visualization, which supports eight chart types: bar, line, area, pie (doughnut), bubble, radar, polar, and scatter.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
+      <p style="margin-top: 0">Chart.js has been an indispensable tool in my frontend development arsenal, empowering me to visualize data and create compelling, interactive charts and graphs within my applications.</p>
+      <p>Integrating Chart.js into my projects has allowed me to convey complex information in a clear and visually appealing manner, enhancing user understanding and engagement.</p>
+      <p>One of the key strengths of Chart.js is its simplicity and ease of use.</p>
+      <p>With its intuitive API and comprehensive documentation, I've been able to quickly integrate various chart types, including line charts, bar charts, pie charts, and more, into my applications.</p>
+      <p style="margin-bottom: 0">The ability to customize chart appearance, labels, colors, and tooltips has enabled me to tailor visualizations to meet specific project requirements and design preferences.</p>
+      `
+    }
+  ],
 }
 
 const I18N: IView = {
   title: 'i18n',
   key: 'i18n',
-  content: [noDataContent],
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'Chart.js - is a free, open-source JavaScript library for data visualization, which supports eight chart types: bar, line, area, pie (doughnut), bubble, radar, polar, and scatter.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
+      <p style="margin-top: 0">In my frontend development journey, internationalization (i18n) has been a crucial aspect in ensuring that applications cater to diverse linguistic and cultural preferences.</p>
+      <p> Implementing i18n solutions has allowed me to create applications that seamlessly adapt to different languages and locales, providing a localized experience for users worldwide.</p>
+      <p>One of the primary approaches I've adopted for i18n is leveraging libraries such as react-i18next or i18next in my projects.</p>
+      <p style="margin-bottom: 0">These libraries offer robust features for managing translations, organizing locale files, and dynamically switching between languages based on user preferences.</p>
+      `
+    }
+  ],
 }
 
 const THEME: IView = {
@@ -449,13 +536,16 @@ const EDUCATION: IView = {
     {
       title: 'Kherson State University',
       key: 'kherson_state_university',
-      text: "Bachelor's degree, software engineer. 2016 - 2021"
+      text: "Bachelor's degree, software engineer. 2016 - 2021",
+      innerHTML: `
+        <img src="${Bachelor}" alt='Bachelor' style="margin-top: 15px; width: 100%; border-radius: 8px"/>
+      `
     },
-    {
-      title: 'Nova Kakhovka Instrumental Engineering College',
-      key: 'nova_kakhovka_instrumental_engineering_college',
-      text: "Secondary (Complete) Education. Telecommunications and Radio Engineering. 2012 - 2016"
-    },
+    // {
+    //   title: 'Nova Kakhovka Instrumental Engineering College',
+    //   key: 'nova_kakhovka_instrumental_engineering_college',
+    //   text: "Secondary (Complete) Education. Telecommunications and Radio Engineering. 2012 - 2016"
+    // },
   ],
 }
 
@@ -467,8 +557,8 @@ const LICENCES_AND_CERTIFICATIONS: IView = {
       title: 'Description',
       key: 'description',
       innerHTML: `
-        It may be important for someone to look at my certificates, but remember, the number of certificates doesn\'t define the skills and expertise of a developer. &#128517; 
-        Practical experience, problem-solving abilities, and continuous learning are equally important factors contributing to one\'s proficiency as a developer.\n`
+        It may be important for someone to look at my certificates, but remember, the number of certificates doesn't define the skills and expertise of a developer. &#128517; 
+        Practical experience, problem-solving abilities, and continuous learning are equally important factors contributing to one's proficiency as a developer.`
     },
     {
       title: 'Learning TypeScript',

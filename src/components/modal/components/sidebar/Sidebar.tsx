@@ -4,8 +4,8 @@ import WindowButtons from "./components/window-buttons/WindowButtons";
 import Search from "./components/search/Search";
 import Item from "./components/item/Item";
 import Account from "./components/account/Account";
-import {ACCOUNT, ICONS, SIDEBAR} from "../../../../constants";
-import {BrowserView, MobileView} from 'react-device-detect';
+import {ACCOUNT, SIDEBAR} from "../../../../constants";
+import {BrowserView} from 'react-device-detect';
 
 const Sidebar = () => {
   const [initialPos, setInitialPos] = useState<any>(null);

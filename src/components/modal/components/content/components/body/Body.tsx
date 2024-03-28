@@ -45,7 +45,7 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
           <div key={index}>
             <div className={styles.title}>{t(i.key)}</div>
             <div className={styles.block}>
-              <div className={styles.item} style={{cursor: 'text'}}>
+              <div className={styles.item} style={{cursor: 'text', flexDirection: 'column', alignItems: 'unset'}}>
                 {i.text}
                 {i.innerHTML ? (
                   <div dangerouslySetInnerHTML={{__html: i.innerHTML}}></div>
@@ -73,7 +73,7 @@ const Body: FC<PropsType> = ({ view, onClick}) => {
                       src={link.icon}
                       width={25}
                       height={25}
-                      style={{objectFit: 'cover', marginRight: 10}}/>
+                      style={{objectFit: 'contain', marginRight: 10}}/>
                   ) : null}
                   <span>{t(link.key)}</span>
                 </div>

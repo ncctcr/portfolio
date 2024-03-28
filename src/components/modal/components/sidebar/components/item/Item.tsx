@@ -39,7 +39,7 @@ const Item: FC<PropsType> = ({dataKey, icon}) => {
           src={icon}
           width={35}
           height={35}
-          style={{objectFit: 'cover', marginRight: 10}}/>
+          style={{objectFit: 'contain', marginRight: 10}}/>
       ) : (
         <div className={styles.icon}/>
       )}
