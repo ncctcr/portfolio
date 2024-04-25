@@ -6,6 +6,10 @@ import Avatar from "./assets/images/avatar.jpeg"
 import MuiIcon from './assets/icons/mui.png'
 import ReactIcon from './assets/icons/react.png'
 import Bachelor from './assets/images/bachelor.png'
+import LinkedIn from './assets/icons/linkedin.png'
+import Telegram from './assets/icons/telegram.png'
+import Instagram from './assets/icons/instagram.png'
+import Gmail from './assets/icons/gmail.png'
 
 export const TABLET_WIDTH = 900
 
@@ -29,6 +33,13 @@ export const ICONS: {[key: string]: string} = {
   EXPERIENCE: 'https://cdn.iconscout.com/icon/free/png-512/free-apple-messages-493150.png?f=avif&w=256',
   SOURCE: 'https://cdn.iconscout.com/icon/free/png-512/free-apple-healt-493148.png?f=avif&w=256',
   TELEGRAM: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png',
+}
+
+const SOCIAL_MEDIA_LINKS: {[key: string]: string} = {
+  LINKEDIN: 'https://www.linkedin.com/in/mykola-nesterchuk-290620186',
+  TELEGRAM: 'https://t.me/ncctcr',
+  INSTAGRAM: 'https://instagram.com/ncctcr',
+  GMAIL: 'mailto:n.ncctcr@gmail.com'
 }
 
 
@@ -597,7 +608,26 @@ const CONTACTS: IView = {
       {
         title: 'Social',
         key: 'social',
-        text: 'No have at the moment'
+        innerHTML: `
+          <div>
+            <a href="${SOCIAL_MEDIA_LINKS.GMAIL}" target="_blank" style="text-decoration: none !important; color: #FFF; display: flex; align-items: center">
+              <img src="${Gmail}" style="height: 30px; width: 30px; object-fit: contain"/>
+              <span style="margin-left: 10px">Gmail</span>
+            </a>
+            <a href="${SOCIAL_MEDIA_LINKS.LINKEDIN}" target="_blank" style="text-decoration: none !important; color: #FFF; display: flex; align-items: center; margin-top: 20px">
+              <img src="${LinkedIn}" style="height: 30px; width: 30px; object-fit: contain"/>
+              <span style="margin-left: 10px">LinkedIn</span>
+            </a>
+            <a href="${SOCIAL_MEDIA_LINKS.TELEGRAM}" target="_blank" style="text-decoration: none !important; color: #FFF; display: flex; align-items: center; margin-top: 20px">
+              <img src="${Telegram}" style="height: 30px; width: 30px; object-fit: contain"/>
+              <span style="margin-left: 10px">Telegram</span>
+            </a>
+            <a href="${SOCIAL_MEDIA_LINKS.INSTAGRAM}" target="_blank" style="text-decoration: none !important; color: #FFF; display: flex; align-items: center; margin-top: 20px">
+              <img src="${Instagram}" style="height: 30px; width: 30px; object-fit: contain"/>
+              <span style="margin-left: 10px">Instagram</span>
+            </a>
+          </div>
+        `
       },
     ]
 }
