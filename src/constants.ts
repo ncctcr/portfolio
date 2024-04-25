@@ -603,7 +603,6 @@ const CONTACTS: IView = {
         title: 'Description',
         key: 'description',
         text: 'If you have any interest in contacting me for any suggestions, or just browsing through my social media, or you\'re just browsing this tab, then I\'ll just leave my links here.'
-
       },
       {
         title: 'Social',
@@ -635,7 +634,24 @@ const CONTACTS: IView = {
 const GIT: IView = {
   title: 'Git',
   key: 'git',
-  content: [noDataContent]
+  content: [
+    {
+      title: 'Description',
+      key: 'description',
+      text: 'Git - is a distributed version control system that tracks changes in any set of computer files.'
+    },
+    {
+      title: 'Experience',
+      key: 'experience',
+      innerHTML: `
+      <p style="margin-top: 0">Git has been a cornerstone of my development workflow, providing powerful version control and collaboration capabilities essential for managing project codebases effectively.</p>
+      <p>Incorporating Git into my projects has enabled me to track changes, collaborate with team members, and ensure the integrity and stability of code throughout the development lifecycle.</p>
+      <p>One of the key benefits of Git is its decentralized nature, which allows each developer to work on their local copy of the repository independently.</p>
+      <p>I've leveraged Git's branching model to create feature branches, enabling me to work on new features or bug fixes without affecting the main codebase.</p>
+      <p style="margin-bottom: 0">This approach promotes isolation and facilitates parallel development, empowering teams to work on multiple tasks simultaneously without conflicts.</p>
+      `
+    }
+  ]
 }
 
 export const VIEWS: IView[] = [
